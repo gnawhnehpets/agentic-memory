@@ -1,7 +1,7 @@
 from openai import AzureOpenAI
 import os
-from dotenv import load_dotenv
-load_dotenv(override=True)
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv(), override=True)
 
 AZURE_OPENAI_KEY = os.getenv('AZURE_OPENAI_KEY')
 AZURE_OPENAI_ENDPOINT = os.getenv('AZURE_OPENAI_ENDPOINT')
